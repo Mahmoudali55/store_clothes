@@ -48,7 +48,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: 
-  flutter_launcher_icons:  
+  flutter_launcher_icons:
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icons/icons/app_icon.jpg"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/icons/icons/play_store_512.png" 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -72,7 +79,7 @@ flutter:
   assets:
     - .env.dev
     - .env.prod
-    - assets/images/core/
+    - assets/images/
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
