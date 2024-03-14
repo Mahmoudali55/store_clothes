@@ -41,6 +41,8 @@ dependencies:
  
   flutter_dotenv: 
   flutter_screenutil: 
+  flutter_native_splash: 
+  
 
 
 dev_dependencies:
