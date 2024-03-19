@@ -8,7 +8,6 @@ class TestOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
       appBar: AppBar(title: const Text('Test One')),
       body: Center(
         child: Column(
@@ -19,7 +18,9 @@ class TestOne extends StatelessWidget {
               onPressed: () {
                 context.pushNamed(AppRoutes.testTwo);
               },
-              child: const Text('Go to Test tow'),
+              child: const Text(
+                'Go to Test tow',
+              ),
             ),
           ],
         ),

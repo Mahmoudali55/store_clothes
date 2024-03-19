@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:store/core/style/theme/color_extension.dart';
 
 extension ContextExtension on BuildContext {
+  //color
+  MyColors get colors => Theme.of(this).extension<MyColors>()!;
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
@@ -10,11 +13,15 @@ extension ContextExtension on BuildContext {
         .pushReplacementNamed(routeName, arguments: arguments);
   }
 
-  Future<dynamic> pushNamedAndRemoveUntil(String routeName,
-      {Object? arguments}) {
+  Future<dynamic> pushNamedAndRemoveUntil(
+    String routeName, {
+    Object? arguments,
+  }) {
     return Navigator.of(this).pushNamedAndRemoveUntil(
-        routeName, (route) => false,
-        arguments: arguments);
+      routeName,
+      (route) => false,
+      arguments: arguments,
+    );
   }
 
   void pop() => Navigator.of(this).pop();

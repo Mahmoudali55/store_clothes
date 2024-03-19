@@ -1,4 +1,7 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:store/core/extensions/context_extensions.dart';
 
 class TestTwo extends StatelessWidget {
   const TestTwo({super.key});
@@ -6,9 +9,12 @@ class TestTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
       appBar: AppBar(title: const Text('TestTwo')),
-      body: const Center(child: Text('TestTwo')),
+      body: Center(
+          child: Text(
+        'TestTwo',
+        style: TextStyle(fontSize: 30, color: context.colors.mainColor),
+      )),
     );
   }
 }

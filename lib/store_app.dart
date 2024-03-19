@@ -5,6 +5,7 @@ import 'package:store/core/common/screen/no_network.dart';
 import 'package:store/core/routes/app_routes.dart';
 import 'package:store/core/style/fonts/font_famaily_helper.dart';
 import 'package:store/core/style/fonts/font_weigth_hlper.dart';
+import 'package:store/core/style/theme/app_theme.dart';
 
 class StoreApp extends StatelessWidget {
   const StoreApp({super.key});
@@ -22,10 +23,7 @@ class StoreApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-                useMaterial3: true,
-              ),
+              theme: themeLight(),
               builder: (context, widget) {
                 return Scaffold(
                   body: Builder(
